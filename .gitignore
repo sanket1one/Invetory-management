@@ -1,0 +1,68 @@
+# Ignore the .git directory itself
+/.git/
+
+# IDE and Editor settings
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Maven & Java build files
+target/
+*.class
+*.war
+*.ear
+
+# Spring Boot specific files
+*.log
+logs/
+*.pid
+*.gz
+hs_err_pid*
+!src/main/resources/application.yml  # Allow committed application.yml if needed
+application-*.yml
+
+# Docker-related files
+docker-compose.override.yml
+*.dockerignore
+
+# OS & System files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.log
+
+# Python related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Git ignore rules for API Gateway, Auth Server, and other microservices
+api-gateway/target/
+auth-server/target/
+inventory-service/target/
+order-service/target/
+product-service/target/
+
+# Maven wrapper files
+.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# Ignore secret configuration files
+.env
+*.key
+*.pem
+
+# Ignore generated test reports
+test-output/
+surefire-reports/
+
+# Ignore database dumps
+*.sql
+*.sqlite
+
+# Ignore node_modules (if frontend is included)
+node_modules/
