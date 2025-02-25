@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "inventory-service", url = "${INVENTORY_SERVICE_HOST:http://localhost}:8200/api/v1/inventory")
+@FeignClient(name = "inventory-service", url = "inventory-service:8200/api/v1/inventory")
 public interface InventoryProxy {
     @PostMapping("/check")
     public boolean check(@RequestBody InvProductReqDto request);

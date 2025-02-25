@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "inventory-service", url = "${INVENTORY_SERVICE_HOST:localhost}:8200/api/v1/inventory")
+@FeignClient(name = "inventory-service", url = "inventory-service:8200/api/v1/inventory")
 public interface InventoryProxy {
 
     @PostMapping("/add")
